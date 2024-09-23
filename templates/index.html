@@ -72,7 +72,7 @@
                                 document.getElementById('userResponse').textContent = 'You spelled: ' + userSpelling;
 
                                 // Normalize and compare spelling
-                                const normalizedUserSpelling = userSpelling.replace(/\s+/g, '').toLowerCase();
+                                const normalizedUserSpelling = userSpelling.replace(/\s+/g, '').trim().toLowerCase().normalize("NFC");
                                 const normalizedWord = word.replace(/\s+/g, '').toLowerCase();
 
                                 let feedbackText;
